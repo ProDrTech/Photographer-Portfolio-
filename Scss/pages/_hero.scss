@@ -210,24 +210,20 @@
 }
 
 .default {
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   align-items: start;
-  // gap: 5.71px;
-  // height: 210px;
 
   [first] {
     display: flex;
     flex-direction: column;
-    // gap: 5px;
     height: 100%;
   }
 
   [second] {
     display: flex;
     align-items: start;
-    // gap: 5.68px;
     height: 100%;
 
     svg[first] {
@@ -238,22 +234,22 @@
     div {
       height: 100%;
       display: flex;
-      // gap: 7px;
       flex-direction: column;
     }
   }
 
   [second]~svg {
     position: absolute;
-    // top: 64.35px;
-    // left: 56.59px;
   }
 }
 
 .wrapper {
+  width: max-content;
+  margin: 0 auto;
+
   &_xxs {
     flex-shrink: 0;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -308,7 +304,6 @@
 
 @include media-compactPhone {
   .wrapper {
-
     &_xxs,
     &_sm,
     &_s,
@@ -581,7 +576,6 @@
 
 @include media-largeLaptop {
   .wrapper {
-
     &_xxs,
     &_xs,
     &_s,

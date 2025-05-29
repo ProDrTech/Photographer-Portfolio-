@@ -459,7 +459,7 @@ body {
   }
 }
 .default {
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   align-items: start;
@@ -487,9 +487,13 @@ body {
   position: absolute;
 }
 
+.wrapper {
+  width: max-content;
+  margin: 0 auto;
+}
 .wrapper_xxs {
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -710,6 +714,9 @@ body {
     top: 158px;
     left: 188.48px;
   }
+}
+.about {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
