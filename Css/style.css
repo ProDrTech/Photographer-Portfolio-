@@ -778,5 +778,73 @@ body {
   font-weight: 400;
   color: #AFB0B6;
 }
+.about_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  border-left: 1px solid #1C1C21;
+  border-right: 1px solid #1C1C21;
+  border-bottom: 1px solid #1C1C21;
+}
+.about_contact [heading] {
+  display: flex;
+  align-items: start;
+  gap: 4px;
+}
+.about_contact [heading] span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #CACACE;
+}
+.about_contact [form] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.about_contact [form] div p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #E4E4E6;
+}
+.about_contact [form] div h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #AFB0B6;
+}
+.about_contact [button] {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about_contact [button] [first] {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 100px;
+  border: 1px solid #1C1C21;
+  background-color: #070708;
+}
+.about_contact [button] [first] div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgb(47, 47, 55) 28%, rgba(47, 47, 55, 0) 100%);
+}
+.about_contact [button] [second] {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about_contact [button] [second] div {
+  width: 100%;
+}
+.about_contact [button] [second] div a {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
