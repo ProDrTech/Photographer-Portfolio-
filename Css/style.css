@@ -116,14 +116,14 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1440px) {
   .container {
     width: calc(100% - 124px);
   }
 }
 @media screen and (min-width: 1900px) {
   .container {
-    width: calc(100% - 200px);
+    width: 1800px;
   }
 }
 .header {
@@ -255,7 +255,7 @@ body {
     display: none;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1440px) {
   .header {
     height: 89px;
   }
@@ -427,7 +427,7 @@ body {
     font-size: 40px;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1440px) {
   .hero {
     height: 260px;
   }
@@ -669,7 +669,7 @@ body {
     left: 170.6px;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1440px) {
   .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_largeLaptop {
     display: none;
   }
@@ -749,7 +749,12 @@ body {
 .about_main svg {
   width: 100%;
 }
-.about_main svg[largePhone] {
+.about_main svg[largePhone],
+.about_main svg[compactTablet],
+.about_main svg[mediumTablet],
+.about_main svg[compactLaptop],
+.about_main svg[mediumLaptop],
+.about_main svg[largeLaptop] {
   display: none;
 }
 .about_me {
@@ -859,7 +864,12 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  .about_main svg[default] {
+  .about_main svg[default],
+  .about_main svg[compactTablet],
+  .about_main svg[mediumTablet],
+  .about_main svg[compactLaptop],
+  .about_main svg[mediumLaptop],
+  .about_main svg[largeLaptop] {
     display: none;
   }
   .about_main svg[largePhone] {
@@ -888,7 +898,7 @@ body {
     border: 1px solid #1C1C21;
     background-color: #070708;
   }
-  .about_contact [button] [first] div {
+  .about_contact [button] [first] a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -907,6 +917,275 @@ body {
   }
   .about_contact [button] [second] div a {
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about_main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0 0;
+    width: 100%;
+  }
+  .about_main svg[default],
+  .about_main svg[largePhone],
+  .about_main svg[mediumTablet],
+  .about_main svg[compactLaptop],
+  .about_main svg[mediumLaptop],
+  .about_main svg[largeLaptop] {
+    display: none;
+  }
+  .about_main svg[compactTablet] {
+    width: max-content;
+    flex-shrink: 0;
+    display: block;
+  }
+  .about_contact [form] {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about_contact [form] div {
+    width: 50%;
+  }
+  .about_contact [button] {
+    display: flex;
+    flex-direction: column;
+  }
+  .about_contact [button] [first] {
+    display: none;
+  }
+  .about_contact [button] [second] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .about_contact [button] [second] div {
+    width: 50%;
+  }
+  .about_contact [button] [second] div a {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about_main svg[default],
+  .about_main svg[largePhone],
+  .about_main svg[compactTablet],
+  .about_main svg[compactLaptop],
+  .about_main svg[mediumLaptop],
+  .about_main svg[largeLaptop] {
+    display: none;
+  }
+  .about_main svg[mediumTablet] {
+    width: max-content;
+    flex-shrink: 0;
+    display: block;
+  }
+  .about_contact [form] {
+    flex-direction: row;
+  }
+  .about_contact [button] {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .about_contact [button] [first] {
+    display: flex;
+  }
+  .about_contact [button] [second] {
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about_main svg[default],
+  .about_main svg[largePhone],
+  .about_main svg[compactTablet],
+  .about_main svg[mediumTablet],
+  .about_main svg[mediumLaptop],
+  .about_main svg[largeLaptop] {
+    display: none;
+  }
+  .about_main svg[compactLaptop] {
+    width: max-content;
+    flex-shrink: 0;
+    display: block;
+  }
+  .about_introduction {
+    padding: 35px;
+  }
+  .about_introduction div span {
+    font-size: 24px;
+  }
+  .about_introduction p {
+    font-size: 16px;
+  }
+  .about_contact {
+    padding: 35px;
+  }
+  .about_contact [heading] span {
+    font-size: 24px;
+  }
+  .about_contact [form] div p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #E4E4E6;
+  }
+  .about_contact [form] div h6 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #AFB0B6;
+  }
+  .about_contact [button] [second] div a span {
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about {
+    padding: 80px 0 0;
+  }
+  .about_heading {
+    padding-bottom: 40px;
+  }
+  .about_heading [text] span {
+    font-size: 16px;
+  }
+  .about_heading [text] h4 {
+    font-size: 48px;
+  }
+  .about_div span {
+    padding: 16px 20px;
+  }
+  .about_main svg[default],
+  .about_main svg[largePhone],
+  .about_main svg[compactTablet],
+  .about_main svg[mediumTablet],
+  .about_main svg[compactLaptop],
+  .about_main svg[largeLaptop] {
+    display: none;
+  }
+  .about_main svg[mediumLaptop] {
+    width: max-content;
+    flex-shrink: 0;
+    display: block;
+  }
+  .about_introduction div span {
+    font-size: 26px;
+  }
+  .about_introduction p {
+    font-size: 18px;
+  }
+  .about_contact [heading] span {
+    font-size: 26px;
+  }
+  .about_contact [form] div p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #E4E4E6;
+  }
+  .about_contact [form] div h6 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #AFB0B6;
+  }
+  .about_contact [button] {
+    justify-content: space-between;
+  }
+  .about_contact [button] [second] div a span {
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .about {
+    padding: 200px 0 0;
+  }
+  .about_heading {
+    padding-bottom: 50px;
+  }
+  .about_heading [text] span {
+    font-size: 20px;
+  }
+  .about_heading [text] h4 {
+    font-size: 58px;
+  }
+  .about_div span {
+    padding: 16px 24px;
+  }
+  .about_main {
+    gap: 30px;
+    padding: 80px 0 0;
+  }
+  .about_main svg[default],
+  .about_main svg[largePhone],
+  .about_main svg[compactTablet],
+  .about_main svg[mediumTablet],
+  .about_main svg[compactLaptop],
+  .about_main svg[mediumLaptop] {
+    display: none;
+  }
+  .about_main svg[largeLaptop] {
+    width: max-content;
+    flex-shrink: 0;
+    display: block;
+  }
+  .about_introduction {
+    gap: 20px;
+    padding: 40px;
+  }
+  .about_introduction div {
+    align-items: center;
+    gap: 10px;
+  }
+  .about_introduction div span {
+    font-size: 30px;
+  }
+  .about_introduction div img {
+    width: 40px;
+    height: 40px;
+  }
+  .about_introduction p {
+    font-size: 18px;
+  }
+  .about_contact {
+    gap: 40px;
+    padding: 40px;
+  }
+  .about_contact [heading] div {
+    align-items: center;
+    gap: 10px;
+  }
+  .about_contact [heading] div span {
+    font-size: 30px;
+  }
+  .about_contact [heading] div img {
+    width: 40px;
+    height: 40px;
+  }
+  .about_contact [heading] span {
+    font-size: 30px;
+  }
+  .about_contact [form] div p {
+    font-size: 18px;
+  }
+  .about_contact [form] div h6 {
+    font-size: 20px;
+  }
+  .about_contact [button] {
+    gap: 60px;
+  }
+  .about_contact [button] [first] {
+    gap: 16px;
+    padding: 10px;
+  }
+  .about_contact [button] [first] a {
+    cursor: pointer;
+    padding: 14px;
+    background: linear-gradient(to bottom, rgb(47, 47, 55) 28%, rgba(47, 47, 55, 0) 100%);
+  }
+  .about_contact [button] [first] a img {
+    width: 24px;
+    height: 24px;
+  }
+  .about_contact [button] [second] div a span {
+    padding: 18px;
   }
 }
 
