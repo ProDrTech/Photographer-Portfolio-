@@ -148,7 +148,7 @@
                 border: 1px solid #1C1C21;
                 background-color: #070708;
 
-                div {
+                a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -578,7 +578,6 @@
                 display: block;
             }
         }
-
         &_introduction {
             gap: 20px;
             padding: 40px;

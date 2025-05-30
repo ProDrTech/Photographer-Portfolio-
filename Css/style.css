@@ -837,7 +837,7 @@ body {
   border: 1px solid #1C1C21;
   background-color: #070708;
 }
-.about_contact [button] [first] div {
+.about_contact [button] [first] a {
   display: flex;
   align-items: center;
   justify-content: center;
