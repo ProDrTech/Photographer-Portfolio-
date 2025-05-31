@@ -981,6 +981,12 @@ body {
     flex-shrink: 0;
     display: block;
   }
+  .about_introduction {
+    padding: 16px;
+  }
+  .about_contact {
+    padding: 16px;
+  }
   .about_contact [form] {
     flex-direction: row;
   }
@@ -1067,11 +1073,17 @@ body {
     flex-shrink: 0;
     display: block;
   }
+  .about_introduction div {
+    align-items: center;
+  }
   .about_introduction div span {
     font-size: 26px;
   }
   .about_introduction p {
     font-size: 18px;
+  }
+  .about_contact [heading] {
+    align-items: center;
   }
   .about_contact [heading] span {
     font-size: 26px;

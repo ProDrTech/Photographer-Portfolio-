@@ -343,7 +343,13 @@
             }
         }
 
+        &_introduction {
+            padding: 16px;
+        }
+
         &_contact {
+            padding: 16px;
+
             [form] {
                 flex-direction: row;
             }
@@ -484,6 +490,7 @@
 
         &_introduction {
             div {
+                align-items: center;
                 span {
                     font-size: 26px;
                 }
@@ -496,6 +503,7 @@
 
         &_contact {
             [heading] {
+                align-items: center;
                 span {
                     font-size: 26px;
                 }
@@ -578,6 +586,7 @@
                 display: block;
             }
         }
+
         &_introduction {
             gap: 20px;
             padding: 40px;
@@ -650,7 +659,7 @@
                         background: linear-gradient(to bottom,
                                 rgba(47, 47, 55, 1) 28%,
                                 rgba(47, 47, 55, 0) 100%);
-                        
+
                         img {
                             width: 24px;
                             height: 24px;
