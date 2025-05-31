@@ -247,7 +247,9 @@
   width: max-content;
   margin: 0 auto;
 
+
   &_xxs {
+    width: 100%;
     flex-shrink: 0;
     position: relative;
     left: 50%;
