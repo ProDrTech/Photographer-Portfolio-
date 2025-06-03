@@ -50,7 +50,7 @@
 
         [largePhone],
         [compactTablet],
-        [mediumTablet]{
+        [mediumTablet] {
             display: none;
         }
 
@@ -137,9 +137,10 @@
 @include media-largePhone {
     .service {
         [main] {
+
             [default],
             [compactTablet],
-            [mediumTablet]{
+            [mediumTablet] {
                 display: none;
             }
 
@@ -151,7 +152,7 @@
 }
 
 @include media-compactTablet {
-    .service {  
+    .service {
         [heading] {
             flex-direction: row;
             align-items: center;
@@ -193,7 +194,7 @@
             }
 
             [largePhone],
-            [mediumTablet]{
+            [mediumTablet] {
                 display: none;
             }
 
@@ -249,6 +250,33 @@
 
         &_div {
             display: none;
+        }
+    }
+}
+
+@include media-mediumTablet {
+    .service {
+        [heading] {
+            [button] {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        [main] {
+            [largePhone],
+            [compactTablet] {
+                display: none;
+            }
+
+            [mediumTablet] {
+                display: block;
+            }
+        }
+
+        &_div {
+            display: block;
         }
     }
 }

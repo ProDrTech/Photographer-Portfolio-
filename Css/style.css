@@ -1413,5 +1413,22 @@ body {
     display: none;
   }
 }
+@media screen and (min-width: 1024px) {
+  .service [heading] [button] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .service [main] [largePhone],
+  .service [main] [compactTablet] {
+    display: none;
+  }
+  .service [main] [mediumTablet] {
+    display: block;
+  }
+  .service_div {
+    display: block;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
