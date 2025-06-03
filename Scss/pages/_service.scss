@@ -17,6 +17,7 @@
 
         [text] {
             text-transform: uppercase;
+
             span {
                 font-size: 14px;
                 color: #797C86;
@@ -24,9 +25,9 @@
             }
 
             h4 {
-               color: #fff;
-               font-size: 28px;
-               font-weight: 600;
+                color: #fff;
+                font-size: 28px;
+                font-weight: 600;
             }
         }
 
@@ -45,6 +46,10 @@
 
         svg {
             width: 100%;
+        }
+
+        [largePhone] {
+            display: none;
         }
 
         [content] {
@@ -113,7 +118,7 @@
             }
         }
 
-        [content] ~ [arrows] {
+        [content]~[arrows] {
             width: max-content;
             margin: 0 auto;
             display: flex;
@@ -123,6 +128,20 @@
             background-color: #070708;
             border-radius: 100px;
             padding: 8px;
+        }
+    }
+}
+
+@include media-largePhone {
+    .service {
+        [main] {
+            [default] {
+                display: none;
+            }
+
+            [largePhone] {
+                display: block;
+            }
         }
     }
 }
