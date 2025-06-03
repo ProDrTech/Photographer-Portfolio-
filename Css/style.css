@@ -1255,7 +1255,9 @@ body {
 .service [main] svg {
   width: 100%;
 }
-.service [main] [largePhone] {
+.service [main] [largePhone],
+.service [main] [compactTablet],
+.service [main] [mediumTablet] {
   display: none;
 }
 .service [main] [content] {
@@ -1326,11 +1328,89 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  .service [main] [default] {
+  .service [main] [default],
+  .service [main] [compactTablet],
+  .service [main] [mediumTablet] {
     display: none;
   }
   .service [main] [largePhone] {
     display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .service [heading] {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .service [heading] [text] span {
+    font-size: 15px;
+  }
+  .service [heading] [text] h4 {
+    font-size: 30px;
+  }
+  .service [heading] [button] [arrows] {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #1C1C21;
+    background-color: #070708;
+    border-radius: 100px;
+    padding: 8px;
+  }
+  .service [main] {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  .service [main] svg {
+    flex-shrink: 0;
+    width: max-content;
+  }
+  .service [main] [largePhone],
+  .service [main] [mediumTablet] {
+    display: none;
+  }
+  .service [main] [compactTablet] {
+    display: block;
+  }
+  .service [main] [content] {
+    gap: 40px;
+  }
+  .service [main] [content] [first] {
+    gap: 16px;
+  }
+  .service [main] [content] [first] div {
+    gap: 10px;
+  }
+  .service [main] [content] [first] div span {
+    font-size: 34px;
+  }
+  .service [main] [content] [first] p {
+    font-size: 16px;
+  }
+  .service [main] [content] [second] {
+    gap: 16px;
+  }
+  .service [main] [content] [second] span {
+    font-size: 16px;
+  }
+  .service [main] [content] [second] [flex] {
+    gap: 10px;
+  }
+  .service [main] [content] [second] [flex] div {
+    gap: 10px;
+    padding: 16px;
+  }
+  .service [main] [content] [second] [flex] div p {
+    font-size: 16px;
+  }
+  .service [main] [content] ~ [arrows] {
+    display: none;
+  }
+  .service_div {
+    display: none;
   }
 }
 

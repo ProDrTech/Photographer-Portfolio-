@@ -48,7 +48,9 @@
             width: 100%;
         }
 
-        [largePhone] {
+        [largePhone],
+        [compactTablet],
+        [mediumTablet]{
             display: none;
         }
 
@@ -135,13 +137,118 @@
 @include media-largePhone {
     .service {
         [main] {
-            [default] {
+            [default],
+            [compactTablet],
+            [mediumTablet]{
                 display: none;
             }
 
             [largePhone] {
                 display: block;
             }
+        }
+    }
+}
+
+@include media-compactTablet {
+    .service {  
+        [heading] {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            [text] {
+                span {
+                    font-size: 15px;
+                }
+
+                h4 {
+                    font-size: 30px;
+                }
+            }
+
+            [button] {
+                [arrows] {
+                    width: max-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    border: 1px solid #1C1C21;
+                    background-color: #070708;
+                    border-radius: 100px;
+                    padding: 8px;
+                }
+            }
+
+        }
+
+        [main] {
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 20px;
+
+            svg {
+                flex-shrink: 0;
+                width: max-content;
+            }
+
+            [largePhone],
+            [mediumTablet]{
+                display: none;
+            }
+
+            [compactTablet] {
+                display: block;
+            }
+
+            [content] {
+                gap: 40px;
+
+                [first] {
+                    gap: 16px;
+
+                    div {
+                        gap: 10px;
+
+                        span {
+                            font-size: 34px;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                [second] {
+                    gap: 16px;
+
+                    span {
+                        font-size: 16px;
+                    }
+
+                    [flex] {
+                        gap: 10px;
+
+                        div {
+                            gap: 10px;
+                            padding: 16px;
+
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            [content]~[arrows] {
+                display: none;
+            }
+        }
+
+        &_div {
+            display: none;
         }
     }
 }
