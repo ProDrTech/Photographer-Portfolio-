@@ -47,7 +47,7 @@
 }
 
 @mixin media-largeLaptop {
-    @media screen and (min-width: 1900px) {
+    @media screen and (min-width: 1800px) {
         @content;
     }
 }

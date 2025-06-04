@@ -50,7 +50,10 @@
 
         [largePhone],
         [compactTablet],
-        [mediumTablet] {
+        [mediumTablet],
+        [compactLaptop],
+        [mediumLaptop],
+        [largeLaptop] {
             display: none;
         }
 
@@ -140,7 +143,10 @@
 
             [default],
             [compactTablet],
-            [mediumTablet] {
+            [mediumTablet],
+            [compactLaptop],
+            [mediumLaptop],
+            [largeLaptop] {
                 display: none;
             }
 
@@ -194,7 +200,10 @@
             }
 
             [largePhone],
-            [mediumTablet] {
+            [mediumTablet],
+            [compactLaptop],
+            [mediumLaptop],
+            [largeLaptop] {
                 display: none;
             }
 
@@ -265,13 +274,176 @@
         }
 
         [main] {
+
             [largePhone],
-            [compactTablet] {
+            [compactTablet],
+            [compactLaptop],
+            [mediumLaptop],
+            [largeLaptop] {
                 display: none;
             }
 
             [mediumTablet] {
                 display: block;
+            }
+        }
+
+        &_div {
+            display: block;
+        }
+    }
+}
+
+@include media-compactLaptop {
+    .service {
+        [main] {
+
+            [largePhone],
+            [compactTablet],
+            [mediumTablet],
+            [mediumLaptop],
+            [largeLaptop] {
+                display: none;
+            }
+
+            [compactLaptop] {
+                display: block;
+            }
+        }
+
+        &_div {
+            display: block;
+        }
+    }
+}
+
+@include media-mediumLaptop {
+    .service {
+        [main] {
+            gap: 40px;
+
+            [largePhone],
+            [compactTablet],
+            [mediumTablet],
+            [compactLaptop],
+            [largeLaptop] {
+                display: none;
+            }
+
+            [mediumLaptop] {
+                display: block;
+            }
+        }
+    }
+}
+
+@include media-largeLaptop {
+    .service {
+        padding: 200px 0 0;
+        gap: 80px;
+        [heading] {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 50px;
+
+            [text] {
+                span {
+                    font-size: 20px;
+                }
+
+                h4 {
+                    font-size: 58px;
+                }
+            }
+
+            [button] {
+                [arrows] {
+                    width: max-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    border: 1px solid #1C1C21;
+                    background-color: #070708;
+                    border-radius: 100px;
+                    padding: 10px;
+
+                    .arrow_btn {
+                        padding: 14px;
+
+                        img {
+                            width: 34px;
+                            height: 34px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        [main] {
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 50px;
+
+            svg {
+                flex-shrink: 0;
+                width: max-content;
+            }
+
+            [largePhone],
+            [mediumTablet],
+            [compactLaptop],
+            [mediumLaptop],
+            [compactTablet] {
+                display: none;
+            }
+
+            
+            [largeLaptop] {
+                display: block;
+            }
+
+            [content] {
+                gap: 50px;
+
+                [first] {
+                    gap: 20px;
+
+                    div {
+                        gap: 16px;
+
+                        span {
+                            font-size: 44px;
+                        }
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                [second] {
+                    gap: 20px;
+
+                    span {
+                        font-size: 18px;
+                    }
+
+                    [flex] {
+                        div {
+                            padding: 18px 20px;
+
+                            p {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            [content]~[arrows] {
+                display: none;
             }
         }
 

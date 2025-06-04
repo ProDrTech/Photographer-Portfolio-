@@ -48,7 +48,7 @@ body {
     padding: 12px 14px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .btn {
     padding: 16px 24px;
     font-size: 18px;
@@ -102,7 +102,7 @@ body {
   gap: 16px;
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .slider_component {
     padding: 20px 0;
   }
@@ -138,7 +138,7 @@ body {
     width: calc(100% - 124px);
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .container {
     width: 1800px;
   }
@@ -283,7 +283,7 @@ body {
     padding: 24px 40px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .header {
     height: 119px;
     padding-left: 40px;
@@ -458,7 +458,7 @@ body {
     font-size: 48px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .hero {
     height: 330px;
   }
@@ -710,7 +710,7 @@ body {
     left: 148.37px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop {
     display: none;
   }
@@ -1123,7 +1123,7 @@ body {
     padding: 16px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1800px) {
   .about {
     padding: 200px 0 0;
   }
@@ -1257,7 +1257,10 @@ body {
 }
 .service [main] [largePhone],
 .service [main] [compactTablet],
-.service [main] [mediumTablet] {
+.service [main] [mediumTablet],
+.service [main] [compactLaptop],
+.service [main] [mediumLaptop],
+.service [main] [largeLaptop] {
   display: none;
 }
 .service [main] [content] {
@@ -1330,7 +1333,10 @@ body {
 @media screen and (min-width: 600px) {
   .service [main] [default],
   .service [main] [compactTablet],
-  .service [main] [mediumTablet] {
+  .service [main] [mediumTablet],
+  .service [main] [compactLaptop],
+  .service [main] [mediumLaptop],
+  .service [main] [largeLaptop] {
     display: none;
   }
   .service [main] [largePhone] {
@@ -1369,7 +1375,10 @@ body {
     width: max-content;
   }
   .service [main] [largePhone],
-  .service [main] [mediumTablet] {
+  .service [main] [mediumTablet],
+  .service [main] [compactLaptop],
+  .service [main] [mediumLaptop],
+  .service [main] [largeLaptop] {
     display: none;
   }
   .service [main] [compactTablet] {
@@ -1420,11 +1429,131 @@ body {
     gap: 20px;
   }
   .service [main] [largePhone],
-  .service [main] [compactTablet] {
+  .service [main] [compactTablet],
+  .service [main] [compactLaptop],
+  .service [main] [mediumLaptop],
+  .service [main] [largeLaptop] {
     display: none;
   }
   .service [main] [mediumTablet] {
     display: block;
+  }
+  .service_div {
+    display: block;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .service [main] [largePhone],
+  .service [main] [compactTablet],
+  .service [main] [mediumTablet],
+  .service [main] [mediumLaptop],
+  .service [main] [largeLaptop] {
+    display: none;
+  }
+  .service [main] [compactLaptop] {
+    display: block;
+  }
+  .service_div {
+    display: block;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .service [main] {
+    gap: 40px;
+  }
+  .service [main] [largePhone],
+  .service [main] [compactTablet],
+  .service [main] [mediumTablet],
+  .service [main] [compactLaptop],
+  .service [main] [largeLaptop] {
+    display: none;
+  }
+  .service [main] [mediumLaptop] {
+    display: block;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .service {
+    padding: 200px 0 0;
+    gap: 80px;
+  }
+  .service [heading] {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  .service [heading] [text] span {
+    font-size: 20px;
+  }
+  .service [heading] [text] h4 {
+    font-size: 58px;
+  }
+  .service [heading] [button] [arrows] {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #1C1C21;
+    background-color: #070708;
+    border-radius: 100px;
+    padding: 10px;
+  }
+  .service [heading] [button] [arrows] .arrow_btn {
+    padding: 14px;
+  }
+  .service [heading] [button] [arrows] .arrow_btn img {
+    width: 34px;
+    height: 34px;
+  }
+  .service [main] {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  .service [main] svg {
+    flex-shrink: 0;
+    width: max-content;
+  }
+  .service [main] [largePhone],
+  .service [main] [mediumTablet],
+  .service [main] [compactLaptop],
+  .service [main] [mediumLaptop],
+  .service [main] [compactTablet] {
+    display: none;
+  }
+  .service [main] [largeLaptop] {
+    display: block;
+  }
+  .service [main] [content] {
+    gap: 50px;
+  }
+  .service [main] [content] [first] {
+    gap: 20px;
+  }
+  .service [main] [content] [first] div {
+    gap: 16px;
+  }
+  .service [main] [content] [first] div span {
+    font-size: 44px;
+  }
+  .service [main] [content] [first] p {
+    font-size: 18px;
+  }
+  .service [main] [content] [second] {
+    gap: 20px;
+  }
+  .service [main] [content] [second] span {
+    font-size: 18px;
+  }
+  .service [main] [content] [second] [flex] div {
+    padding: 18px 20px;
+  }
+  .service [main] [content] [second] [flex] div p {
+    font-size: 18px;
+  }
+  .service [main] [content] ~ [arrows] {
+    display: none;
   }
   .service_div {
     display: block;
