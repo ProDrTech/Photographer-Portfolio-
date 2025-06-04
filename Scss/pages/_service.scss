@@ -122,18 +122,33 @@
                 }
             }
         }
+    }
 
-        [content]~[arrows] {
-            width: max-content;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border: 1px solid #1C1C21;
-            background-color: #070708;
-            border-radius: 100px;
-            padding: 8px;
+    [wrapper] {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        [div] {
+            transition: transform 0.6s ease;
+            width: 100%;
+            flex-shrink: 0;
         }
+    }
+
+    [wrapper]~[arrows] {
+        width: max-content;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border: 1px solid #1C1C21;
+        background-color: #070708;
+        border-radius: 100px;
+        padding: 8px;
     }
 }
 
@@ -260,6 +275,10 @@
         &_div {
             display: none;
         }
+
+        [wrapper]~[arrows]  {
+            display: none;
+        }
     }
 }
 
@@ -341,6 +360,7 @@
     .service {
         padding: 200px 0 0;
         gap: 80px;
+
         [heading] {
             flex-direction: row;
             align-items: center;
@@ -399,7 +419,7 @@
                 display: none;
             }
 
-            
+
             [largeLaptop] {
                 display: block;
             }
@@ -449,6 +469,18 @@
 
         &_div {
             display: block;
+        }
+
+        [wrapper] {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            [div] {
+                transition: transform 0.6s ease;
+                width: 100%;
+                flex-shrink: 0;
+            }
         }
     }
 }

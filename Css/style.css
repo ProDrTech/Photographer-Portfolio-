@@ -1318,7 +1318,20 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
-.service [main] [content] ~ [arrows] {
+.service [wrapper] {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.service [wrapper] [div] {
+  transition: transform 0.6s ease;
+  width: 100%;
+  flex-shrink: 0;
+}
+.service [wrapper] ~ [arrows] {
   width: max-content;
   margin: 0 auto;
   display: flex;
@@ -1419,6 +1432,9 @@ body {
     display: none;
   }
   .service_div {
+    display: none;
+  }
+  .service [wrapper] ~ [arrows] {
     display: none;
   }
 }
@@ -1557,6 +1573,16 @@ body {
   }
   .service_div {
     display: block;
+  }
+  .service [wrapper] {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .service [wrapper] [div] {
+    transition: transform 0.6s ease;
+    width: 100%;
+    flex-shrink: 0;
   }
 }
 
