@@ -2,5 +2,92 @@
 @import "../abstract/variables";
 
 .portfolio {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 0 0;
+    // border: 1px solid red;
+
+    [heading] {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        padding: {
+            bottom: 20px;
+        }
+
+        ;
+        border-bottom: 1px solid #1C1C21;
+
+        [text] {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            span {
+                font-size: 14px;
+                color: #797C86;
+            }
+
+            h4 {
+                font-size: 28px;
+                color: #fff;
+            }
+        }
+
+        [button] {
+            [arrows] {
+                display: none;
+            }
+        }
+    }
+}
+
+@include media-compactTablet {
+    .portfolio {
+        [heading] {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: {
+                bottom: 20px;
+            }
+
+            border-bottom: 1px solid #1C1C21;
+
+            [text] {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 15px;
+                }
+
+                h4 {
+                    font-size: 28px;
+                }
+            }
+
+            [button] {
+                [arrows] {
+                    width: max-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    border: 1px solid #1C1C21;
+                    background-color: #070708;
+                    border-radius: 100px;
+                    padding: 8px;
+                }
+            }
+        }
+
+        &_div {
+            display: none;
+        }
+    }
 }
