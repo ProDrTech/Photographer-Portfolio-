@@ -1585,5 +1585,8 @@ body {
     flex-shrink: 0;
   }
 }
+.portfolio {
+  border: 1px solid red;
+}
 
 /*# sourceMappingURL=style.css.map */
